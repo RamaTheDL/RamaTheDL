@@ -1,0 +1,26 @@
+local DarkraiX = loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Kavo-Ui/main/Darkrai%20Ui", true))()
+
+local Library = DarkraiX:Window("DarkraiX","","",Enum.KeyCode.RightControl);
+
+Tab1 = Library:Tab("Tab")
+
+Tab1:Button("Cart Ride Into Rdite",function()
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/RamaTheDL/RamaTheDL/main/Cart%20Ride%20Into%20Rdite%5BRoblox%5D"))() -- Script That A Button Executes When Clicked!
+end)
+
+Tab1:Button("Infinite Yield",function()
+     loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+Tab1:Button("Click Tp Tool",function()
+     mouse = game.Players.LocalPlayer:GetMouse()
+tool = Instance.new("Tool")
+tool.RequiresHandle = false
+tool.Name = "Equip to Click TP"
+tool.Activated:connect(function()
+local pos = mouse.Hit+Vector3.new(0,2.5,0)
+pos = CFrame.new(pos.X,pos.Y,pos.Z)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
+end)
+tool.Parent = game.Players.LocalPlayer.Backpack
+end)
